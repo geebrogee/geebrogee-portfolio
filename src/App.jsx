@@ -18,7 +18,7 @@ function Navbar() {
       <Link to="/" className="font-extrabold text-3xl mb-2">Gabriel Gutierrez</Link>
       <div className="space-x-4">
         <Link to="/" className="font-semibold hover:text-gray-400">Home</Link>
-        <Link to="/projects" className="hover:text-gray-400">Showcase</Link>
+        <Link to="/projects" className="font-semibold hover:text-gray-400">Showcase</Link>
         <Link to="/contact" className="font-semibold hover:text-gray-400">Contact</Link>
       </div>
     </nav>
@@ -43,7 +43,9 @@ function ProjectCard({ image, title, description, link }) {
         <p className="text-gray-200 mt-2 text-sm">{description}</p>
       </div>
     </a>
+    
   );
+
 }
 
 function HomePage() {
@@ -58,7 +60,7 @@ function HomePage() {
 
 function ProjectDetailThrillseekers() {
   return (
-    <div className="max-w-3xl mx-auto p-6 font-medium">
+    <><div className="max-w-3xl mx-auto p-6 font-medium">
       <h1 className="text-3xl font-bold mb-4">ThrillSeekers Convention</h1>
       <p className="mb-6 text-gray-700">
         This case study explores the full branding for ThrillSeekers Convention — a gathering of extreme sports enthusiasts. The work included logo design, print collateral, digital promotion, event badges, and signage. This identity captured the adrenaline-driven vibe while maintaining clarity and cohesion across all touchpoints.
@@ -66,12 +68,20 @@ function ProjectDetailThrillseekers() {
       {[1, 2, 3, 4, 5, 6].map((num) => (
         <img
           key={num}
-          src={`/images/thrillseekers_0${num}.jpg`}
+          src={`/images/thrillseekers-mockup-${num}.jpg`}
           alt={`Thrillseekers ${num}`}
-          className="mb-4 w-full rounded-lg"
-        />
+          className="mb-4 w-full rounded-lg" />
       ))}
-    </div>
+    </div><a
+      href="/pdfs/thrillseekers_casestudy_final-reduced.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-block bg-black text-white font-semibold px-4 py-2 rounded-lg mb-6 hover:bg-gray-800 transition"
+    >
+        View Project Case Study (PDF)
+      </a></>
+
+
   );
 }
 
